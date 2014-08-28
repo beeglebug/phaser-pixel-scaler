@@ -21,7 +21,7 @@ Phaser.Plugin.PixelScaler.prototype.init = function(scale) {
     this.scaledCanvas = Phaser.Canvas.create(this.scaledWidth, this.scaledHeight);
     this.context = this.scaledCanvas.getContext('2d');
 
-    Phaser.Canvas.addToDOM(this.scaledCanvas);
+    Phaser.Canvas.addToDOM(this.scaledCanvas, this.game.parent);
     Phaser.Canvas.setSmoothingEnabled(this.context, false);
 
     this.originalCanvas = this.game.canvas;
